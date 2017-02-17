@@ -80,16 +80,16 @@ apt-get -y clean
 
 echo "== Stop Service:"
 
-/etc/init.d/php-fastcgi stop 2> /dev/null
-/etc/init.d/nginx stop 2> /dev/null
-/etc/init.d/bind9 stop 2> /dev/null
-/etc/init.d/apache2 stop 2> /dev/null
-/etc/init.d/mysql stop 2> /dev/null
-/etc/init.d/php5-cgi stop 2> /dev/null
-/etc/init.d/php5-fpm stop 2> /dev/null
+/etc/init.d/php-fastcgi stop
+/etc/init.d/nginx stop
+/etc/init.d/bind9 stop
+/etc/init.d/apache2 stop
+/etc/init.d/mysql stop
+/etc/init.d/php5-cgi stop
+/etc/init.d/php5-fpm stop
 
-killall php5-cgi 2> /dev/null
-killall php5-fpm 2> /dev/null
+killall php5-cgi
+killall php5-fpm
 
 update-rc.d -f bind9 remove
 update-rc.d -f apache2 remove

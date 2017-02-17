@@ -37,8 +37,7 @@ rvm pkg install ncurses
 rvm pkg install pkgconfig
 
 rvm reload
-
-rvm install 1.9.3
+rvm install 2.0
 
 source ~/.rvm/scripts/rvm
 source ~/.bashrc
@@ -48,4 +47,4 @@ rvm gemset use global
 gem install bundler
 gem install bundle
 
-rvm --default use 1.9.3
+rvm --default use 2.0

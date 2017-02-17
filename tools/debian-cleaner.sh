@@ -5,16 +5,7 @@ if [ "$USER" != "root" ]; then
     exit
 fi
 
-ssh_port_tables="$(awk '/#ssh_port/{print $9}' $1)"
-ssh_port_config="$(awk '/Port/{print $2}' /etc/ssh/sshd_config)"
 
-# SHECH SSH PORT
-if [ "$ssh_port_tables" != "$ssh_port_config" ];then
-    echo " ----------------------------------------------------------------"
-    echo " => CAUTION! ssh port :"
-    echo " => $ssh_port_tables  (iptables) ... and ....  $ssh_port_config (sshd_config)"
-    exit
-fi
 
 # SUDO USER
 echo " ----------------------------------------------------------------"
@@ -23,46 +14,8 @@ echo " $USER "
 echo " => Please enter the futur 'sudo' USER name:"
 read use
 
-# IPTABLE
-if [ -f "$1" ];then
-    echo "- Iptables:"
-    newname=`echo "$1" | sed 's/.txt//;s/.sh//'`
-    cp "$1" "$newname"
-
-    rm /etc/rc*.d/*iptables*
-    rm /etc/init.d/*iptables*
-
-    update-rc.d -f "$newname" remove
-    rm "/etc/init.d/$newname"
-    rm "/etc/init.d/$1"
-
-    cp "$newname" "/etc/init.d/$newname"
-    rm "$newname"
-
-    chown root:root "/etc/init.d/$newname"
-    chmod 755 "/etc/init.d/$newname"
-
-    update-rc.d -f "$newname" start 15 1 2 3 4 5 . stop 55 0 6 .
-fi
-
-# BASHRC
-if [ -f "$2" ];then
-    echo "- Bashrc:"
-
-    cp "$2" /root/.bashrc
-    chown root:root /root/.bashrc
-    chmod 755 /root/.bashrc
-
-    cp "$2" "/home/$use/.bashrc"
-    chown "$use":"$use" "/home/$use/.bashrc"
-    chmod 755 "/home/$use/.bashrc"
-
-    source ~/.bashrc
-
-fi
-
 # CLEAN
-echo "" >errors-deploiement.log
+echo "" > errors-deploiement.log
 echo " ------------------------------------- "
 echo " Cleaning Debian And Ubuntu Server :"
 
@@ -152,7 +105,7 @@ apt-get -y purge php5-*
 apt-get -y purge nginx
 
 # REMOVE / BACKUP MYSQL DATABASES
-echo "- Removing database:"
+echo "- Removing / Backup database:"
 date=$(date '+%Y-%m-%d-%I-%M-%S')
 dir_backup=/home/"$use"/backup_mysql/"$date"
 mkdir -p "$dir_backup"
@@ -168,16 +121,16 @@ locale-gen en_US.UTF-8
 
 update-rc.d -f ssh start 30 1 2 3 4 5 . stop 30 0 6 .
 
-apt-get -y install htop
-apt-get -y install screen
-apt-get -y install sudo
-apt-get -y install aptitude
-apt-get -y install curl
-apt-get -y install gcc
-apt-get -y install bzip2
-apt-get -y install vim
 apt-get -y install make
+apt-get -y install gcc
 apt-get -y install build-essential bison openssl libreadline6 libreadline6-dev
+apt-get -y install sudo
+apt-get -y install curl
+apt-get -y install htop
+apt-get -y install aptitude
+apt-get -y install bzip2
+apt-get -y install screen
+apt-get -y install vim
 apt-get -y install git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev
 
 echo "- Secure software:"
@@ -195,7 +148,7 @@ Defaults	env_reset
 groupadd sudo
 gpasswd -a $use sudo
 
-echo "- Remove apache sites-enabled:"
+echo "- Remove apache/nginx sites-enabled:"
 rm /etc/apache2/sites-enabled/*
 rm /etc/nginx/sites-enabled/*
 
@@ -209,8 +162,6 @@ apt-get -y autoclean
 apt-get -y clean
 apt-get -y update
 apt-get -y upgrade
-
-bash /etc/init.d/"$newname"
 
 echo "- Restarting ssh"
 echo "000000000000000000000000000000000000000000000000000000"
