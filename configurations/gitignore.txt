@@ -1,7 +1,17 @@
-# PUT YOURS HERE :
+# --- PROJECT ---
+# (add your specific files)
 
+# --- RAILS ---
+/.bundle
+/log/*.log
+public/uploads/**
+/tmp
+*.zeus.sock*
 
-# OTHERS -------------------------
+# --- NODE ---
+*node_modules*
+
+# --- ARCHIVE ---
 *.7z
 *.dmg
 *.gz
@@ -12,9 +22,10 @@
 *.zip
 *.sqlite
 *.sqlite3
-*.rbx*
 
-# BINARY / GENERATED --------------
+# --- GENERATED ---
+*.tags*
+*.rbx*
 *.com
 *.class
 *.dll
@@ -34,9 +45,9 @@
 *.log
 *~
 
-# OS ---------------------
+# --- OS ---
 ._.*
-.DS_Store*
+*.DS_Store*
 .cache
 .project
 .settings
@@ -47,9 +58,8 @@ Icon?
 nbproject
 Thumbs.db
 
-# IDE -------------------
-# XCODE :
-
+# --- IDE ---
+# XCODE:
 *~.nib
 *.pbxuser
 *.perspective
@@ -59,16 +69,17 @@ xcuserdata/
 *.mode1v3
 *.mode2v3
 
-# KOMODO
+# KOMODO:
 *.komodoproject
 .komodotools
 
-# DREAMWEAVER :
+# DREAMWEAVER:
 _notes
 dwsync.xml
 
-# VERSIONS
+.idea
+
+# --- VERSIONS ---
 .hg
 .svn
 .CVS
-.idea
