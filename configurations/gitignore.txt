@@ -3,10 +3,13 @@
 
 # --- RAILS ---
 /.bundle
-/log/*.log
 public/uploads/**
-/tmp
 *.zeus.sock*
+
+/log/*.log
+!/log/.keep
+/tmp
+!/tmp/.keep
 
 # --- NODE ---
 *node_modules*
@@ -22,6 +25,7 @@ public/uploads/**
 *.zip
 *.sqlite
 *.sqlite3
+*.sqlite3-journal
 
 # --- GENERATED ---
 *.tags*
