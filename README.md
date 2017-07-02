@@ -75,8 +75,9 @@ If you want MYSQL :
 ## IP things
 
 My ip :
-
-	curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'
+```bash
+curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'
+```
 
 Google DNS :
 
@@ -85,16 +86,11 @@ Google DNS :
 
 OpenDNS :
 
-	208.67.222.222
-	208.67.220.222
-
-
+```bash
+208.67.222.222
+208.67.220.222
+```
 
 # CONFIG
 
 bash ./configurations/config.sh
-
-# TODO
-
-- pg installation create user
-- cool ST plugins

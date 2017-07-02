@@ -113,7 +113,8 @@ export PATH="$PATH:`yarn global bin`"
 WORK_PATH=~/Work
 alias clean_log='find $WORK_PATH -type f -iwholename "*/log/*.log" -exec rm "{}" +'
 alias clean_tmp='find $WORK_PATH -type d -iwholename "*/tmp/cache" -exec rm -rf "{}" +'
-
+# This one is <3: use "l" instead of "ls" to list your files in the current directory, they will be sorted by directories first
+alias l='gls --group-directories-first -lh --color=auto -G'
 #=====================================================
 #=====================================================
 # Ruby process
