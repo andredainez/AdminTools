@@ -88,3 +88,8 @@ OpenDNS :
 	208.67.222.222
 	208.67.220.222
 
+
+
+# CONFIG
+
+bash ./configurations/config.sh

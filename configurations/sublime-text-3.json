@@ -16,36 +16,20 @@
   "caret_extra_bottom": 0,
   "caret_extra_top": 0,
   "caret_extra_width": 2,
-  "caret_style": "smooth",
+  "caret_style": "phase",
   "caret_width": 1,
-  "color_scheme": "Packages/Colorcoder/Material-Theme-Darker (Colorcoded).tmTheme",
   "copy_with_empty_selection": true,
-  "create_window_at_startup": false,
-  "detect_indentation": false,
+  "detect_indentation": true,
   "detect_slow_plugins": true,
   "disable_tab_abbreviations": true,
   "drag_text": false,
   "draw_white_space": "selection",
   "enable_tab_scrolling": true,
-  "enki_theme_accent_red": true,
-  "enki_theme_bold_tab": true,
-  "enki_theme_color_expanded_folder": true,
-  "enki_theme_compact_panel": true,
-  "enki_theme_compact_sidebar": true,
-  "enki_theme_disable_fileicons": false,
-  "enki_theme_disable_folder_animation": true,
-  "enki_theme_disable_tree_indicator": true,
-  "enki_theme_panel_separator": true,
-  "enki_theme_small_statusbar": true,
-  "enki_theme_small_tab": true,
-  "enki_theme_tabs_autowidth": true,
-  "enki_theme_tabs_separator": true,
-  "enki_theme_tree_headings": true,
   "ensure_newline_at_eof_on_save": true,
   "fade_fold_buttons": false,
   "file_exclude_patterns":
   [
-    ".DS_Store",
+    "*.DS_Store*",
     "._.*",
     "*.pyc",
     "*.pyo",
@@ -71,17 +55,15 @@
   "folder_exclude_patterns":
   [
     "*.sass-cache",
-    "*.rbx",
     ".git",
     ".bundle",
-    ".zeus*",
     "tmp/data",
     "node_modules"
   ],
-  "font_face": "Hack",
   "font_options":
   [
     "subpixel_antialias",
+    // "gray_antialias",
     "no_round"
   ],
   "font_size": 12,
@@ -89,9 +71,6 @@
   "highlight_modified_tabs": true,
   "ignored_packages":
   [
-    "ASP",
-    "D",
-    "Scala",
     "Vintage"
   ],
   "indent_guide_options":
@@ -99,21 +78,20 @@
     "draw_normal",
     "draw_active"
   ],
-  "indent_to_bracket": true,
+  "indent_to_bracket": false,
   "index_files": true,
-  "line_padding_bottom": 1.6,
-  "line_padding_top": 1.6,
+  "line_padding_bottom": 1.5,
+  "line_padding_top": 1.5,
   "match_brackets": true,
   "match_brackets_angle": true,
   "match_brackets_braces": true,
   "match_brackets_content": true,
   "match_brackets_square": true,
-  "original_color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-Darker.tmTheme",
   "overlay_scroll_bars": "enabled",
   "remember_open_files": true,
   "rulers":
   [
-    80
+    90
   ],
   "save_on_focus_lost": true,
   "scroll_past_end": true,
@@ -123,14 +101,25 @@
   "show_minimap": false,
   "static_modified_tab": true,
   "tab_size": 2,
-  "tabs_border": false,
-  "tabs_medium": false,
-  "tabs_small": true,
-  "theme": "Enki-Theme.sublime-theme",
   "translate_tabs_to_spaces": true,
   "trim_automatic_white_space": true,
   "trim_trailing_white_space_on_save": true,
-  "wide_caret": false,
+  "wide_caret": true,
   "word_separators": "./\\()\"':,;<>~#$%^&*|+=[]{}`~",
-  "word_wrap": true
+  "word_wrap": true,
+  "indent_guide_options": [
+    "draw_normal",
+    "draw_active"
+  ],
+
+  "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+  "theme": "Material-Theme-Darker.sublime-theme",
+
+  "material_theme_small_tab": true,
+  "material_theme_small_statusbar": true,
+  "material_theme_bold_tab": true,
+  "material_theme_compact_panel": true,
+  "material_theme_compact_sidebar": true,
+  "material_theme_disable_folder_animation": true,
+  "material_theme_accent_pink": true,
 }
