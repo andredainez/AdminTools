@@ -30,21 +30,22 @@ gem update --system
 gem install bundler
 gem install rails
 gem install rb-fsevent
+gem install byebug
+gem install rubocop
 
 rbenv rehash
-
-rbenv versions
-rbenv version
 
 # NODE
 brew install node
 chown -R $USER /usr/local/share/systemtap
 brew link node
+brew install yarn
+
+export PATH="$PATH:`yarn global bin`"
+yarn global add prettier eslint-plugin-prettier eslint-config-prettier gulp node-sass
+
 
 # SUBLIME TEXT
-
-gem install byebug
-
 curl https://packagecontrol.io/Package%20Control.sublime-package -o ~/Library/Application\ Support/Sublime\ Text 3/Installed\ Packages/Package\ Control.sublime-package
 
 # Glue
@@ -61,11 +62,18 @@ curl https://packagecontrol.io/Package%20Control.sublime-package -o ~/Library/Ap
 # Material Theme
 
 # To Test
-
 # Ruby Debugger
 # Colorcoder
 
-# FINDER
-killall SystemUIServer
-killall -HUP Finder
-killall Dock
+# JsPrettier
+# IN $HOME/Library/Application Support/Sublime Text 3/Packages/User/JsPrettier.sublime-settings
+# {
+#   "prettier_cli_path": "/usr/local/Cellar/node/8.1.3/bin/prettier",
+#   "auto_format_on_save": true,
+# }
+
+
+# (ZSH et ST3 config)
+curl https://raw.githubusercontent.com/damln/AdminTools/master/configurations/zshrc.sh -o "$HOME/.zshrc"
+curl https://raw.githubusercontent.com/damln/AdminTools/master/configurations/rubocop.yml -o "$HOME/.rubocop.yml"
+curl https://raw.githubusercontent.com/damln/AdminTools/master/configurations/sublime-text-3.json -o "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"

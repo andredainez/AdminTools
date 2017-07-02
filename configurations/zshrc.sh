@@ -98,6 +98,9 @@ export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH
 # CARGO
 export PATH="$PATH:$HOME/.cargo/bin"
 
+# -----------------
+# YARN
+export PATH="$PATH:`yarn global bin`"
 
 
 

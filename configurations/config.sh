@@ -10,5 +10,12 @@ defaults write com.apple.screencapture location ~/Dropbox/Photos/screenshots # S
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1 # Browse all
 chflags nohidden ~/Library # See Librairy in finder
 
-cp ./configurations/zshrc.sh $HOME/.zshrc
+cp ./configurations/zshrc.sh "$HOME/.zshrc"
+cp ./configurations/rubocop.yml "$HOME/.rubocop.yml"
+cp ./configurations/Zenburnesque.tmTheme "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Zenburnesque.tmTheme"
 cp ./configurations/sublime-text-3.json "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+
+# FINDER
+killall SystemUIServer
+killall -HUP Finder
+killall Dock

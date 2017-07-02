@@ -1,0 +1,53 @@
+# Encoding:
+#   Enabled: false
+
+AllCops:
+  Include:
+    - Rakefile
+    - Gemfile
+    - config.ru
+  Exclude:
+    - 'bin/*'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'log/*'
+    - 'public/**/*'
+    - 'script/**/*'
+    - 'spec/**/*'
+    - 'tmp/**/*'
+    - 'config/initializers/*'
+    - 'config/**/*'
+    - 'app/front/**/*'
+
+LineLength:
+  Max: 90
+
+StringLiterals:
+  # single_quotes, double_quotes
+  EnforcedStyle: double_quotes
+  Enabled: true
+
+GlobalVars:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+AndOr:
+  Enabled: false
+
+Not:
+  Enabled: false
+
+ClassLength:
+  CountComments: false  # count full line comments?
+  Max: 500
+
+RedundantSelf:
+  Enabled: false

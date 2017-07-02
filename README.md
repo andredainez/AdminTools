@@ -38,7 +38,7 @@ If you want MYSQL :
 ### Ruby
 
 	bash ./tools/debian-deploy-ruby.sh
-	
+
 	# Press 'q' when prompt
 
 ### Redis
@@ -56,13 +56,13 @@ If you want MYSQL :
 ### File recover
 
 	brew install foremost
-	
+
 	# OR
-	
+
 	sudo apt-get install foremost
-	
+
 	foremost -a -w -i /dev/sda1 -o ./output_dir
-	
+
 # Other
 ## Local SMTP server for debug
 
@@ -93,3 +93,8 @@ OpenDNS :
 # CONFIG
 
 bash ./configurations/config.sh
+
+# TODO
+
+- pg installation create user
+- cool ST plugins
