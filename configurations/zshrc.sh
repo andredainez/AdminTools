@@ -301,7 +301,6 @@ bes () {
     echo "exec rails server -b 0.0.0.0 $str" | xargs bundle
 }
 
-
 start_pg () {
   rm /usr/local/var/postgres/postmaster.pid
   pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
@@ -321,7 +320,6 @@ boom () {
     git commit -m "$str"
 }
 
-
 pidfor () {
     str=""
     # This is the hack:
@@ -336,4 +334,8 @@ pidfor () {
     echo "ps aux | grep -i \"$str\""
 
     ps aux | grep -i "$str"
+}
+
+reload_shell () {
+    source ~/.zshrc
 }

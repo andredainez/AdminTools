@@ -32,6 +32,7 @@ gem install rails
 gem install rb-fsevent
 gem install byebug
 gem install rubocop
+gem install htmlbeautifier
 
 rbenv rehash
 
@@ -61,16 +62,19 @@ curl https://packagecontrol.io/Package%20Control.sublime-package -o ~/Library/Ap
 # AllAutocomplete
 # Material Theme
 
-# To Test
-# Ruby Debugger
-# Colorcoder
-
 # JsPrettier
 # IN $HOME/Library/Application Support/Sublime Text 3/Packages/User/JsPrettier.sublime-settings
 # {
 #   "prettier_cli_path": "/usr/local/Cellar/node/8.1.3/bin/prettier",
 #   "auto_format_on_save": true,
 # }
+
+# SublimeLinter-ruby
+# IN $HOME/Library/Application Support/Sublime Text 3/Packages/User/JsPrettier.sublime-settings
+# {
+#   "ruby": "/Users/damln/.rbenv/shims/ruby"
+# }
+
 
 
 # (ZSH et ST3 config)
