@@ -2,7 +2,7 @@
 
 - You can have a look at my configurations files here:
 [https://github.com/damln/setup](https://github.com/damln/setup)
-- And all my OSX steup here: [https://damln.com/log/setup](https://damln.com/log/setup)
+- And all my OSX setup here: [https://damln.com/log/setup](https://damln.com/log/setup)
 
 
 # Index
